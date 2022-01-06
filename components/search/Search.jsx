@@ -116,17 +116,17 @@ export default function Search() {
             {fetchStatus === "loading" && (
               <img src={SpinIcon.src} alt="spinner" />
             )}
-            {fetchStatus === "finished" && <i class="fas fa-search"></i>}
+            {fetchStatus === "finished" && <i className="fas fa-search"></i>}
             <span>
-              {fetchStatus === "finished" ? "Kết quả cho " : "Tìm "}'
-              {searchValue}'
+              {fetchStatus === "finished" ? "Kết quả cho " : "Tìm "}
+              {searchValue}
             </span>
           </div>
           {searchResult.length > 0 && (
             <div className={styles["result__list"]}>
               <ul>
                 {searchResult.slice(0, 10).map((result) => (
-                  <li>
+                  <li key={result.link}>
                     <Link onClick={resetSearch} href={`/post/${result.link}`}>
                       <a className={styles["result__item"]}>
                         <img src={result.thumbnail.url} alt={result.title} />

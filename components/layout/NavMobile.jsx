@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import styles from "./NavMobile.module.css";
-const NavMobile = React.forwardRef((props, ref) => {
+const NavMobile = React.forwardRef(function NavMobile(props, ref) {
   const router = useRouter();
   return (
     <nav ref={ref} className={styles.nav}>

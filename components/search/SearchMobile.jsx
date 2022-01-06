@@ -87,7 +87,7 @@ export default function SearchMobile(props) {
         <div>
           {fetchStatus === "finished" &&
             searchResult.slice(0, 4).map((result) => (
-              <Link href={`/post/${result.link}`}>
+              <Link key={result.link} href={`/post/${result.link}`}>
                 <a onClick={props.onClose} className={styles["result__item"]}>
                   <img src={result.thumbnail.url} alt={result.title} />
                   <span>{result.title}</span>
