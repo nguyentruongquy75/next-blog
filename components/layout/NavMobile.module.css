@@ -4,7 +4,7 @@
   left: 0;
   bottom: 0;
   z-index: 3;
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   width: 80%;
 
   padding: 4rem 0 0 1.6rem;
@@ -28,21 +28,21 @@
 .nav a {
   display: block;
   padding: 1.6rem 0 1.6rem 1.6rem;
-  color: #292929;
+  color: var(--color-text);
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
 }
 
 .nav i {
-  color: #757575;
+  color: var(--color-text-sub);
   margin-right: 1.6rem;
   min-width: 2rem;
 }
 
 .nav a:hover {
-  background-color: #f0f0f0;
+  background-color: var(--color-background-sub);
 }
 
 .nav a.active {
-  background-color: #f0f0f0;
+  background-color: var(--color-background-sub);
 }

@@ -104,7 +104,7 @@ export default function Footer() {
                 {about.facebook && (
                   <li>
                     <Link href={about.facebook} replace>
-                      <img src={Facebook} alt="facebook" />
+                      <img src={Facebook.src} alt="facebook" />
                     </Link>
                   </li>
                 )}
@@ -112,7 +112,7 @@ export default function Footer() {
                 {about.github && (
                   <li>
                     <Link href={about.github} replace>
-                      <img src={Github} alt="github" />
+                      <img src={Github.src} alt="github" />
                     </Link>
                   </li>
                 )}
@@ -120,7 +120,7 @@ export default function Footer() {
                 {about.linkedin && (
                   <li>
                     <Link href={about.linkedin} replace>
-                      <img src={Linkedin} alt="Linkedin" />
+                      <img src={Linkedin.src} alt="Linkedin" />
                     </Link>
                   </li>
                 )}
@@ -128,7 +128,7 @@ export default function Footer() {
                 {about.gmail && (
                   <li>
                     <Link href={about.gmail} replace>
-                      <img src={Gmail} alt="Gmail" />
+                      <img src={Gmail.src} alt="Gmail" />
                     </Link>
                   </li>
                 )}
@@ -136,7 +136,7 @@ export default function Footer() {
                 {about.youtube && (
                   <li>
                     <Link href={about.youtube} replace>
-                      <img src={Youtube} alt="Gmail" />
+                      <img src={Youtube.src} alt="Gmail" />
                     </Link>
                   </li>
                 )}

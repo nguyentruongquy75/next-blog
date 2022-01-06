@@ -30,8 +30,10 @@ export default function Nav() {
         </li>
 
         <li>
-          <Link href="/useful">
-            <a className={router.asPath === "/useful" ? styles.active : ""}>
+          <Link href="/posts/useful">
+            <a
+              className={router.asPath === "/posts/useful" ? styles.active : ""}
+            >
               <i className="fas fa-file-alt"></i>
               Useful
             </a>

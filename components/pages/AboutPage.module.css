@@ -14,3 +14,17 @@
 .aside {
   grid-column: 3/4;
 }
+
+@media (max-width: 1023px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    grid-column: 1/2;
+  }
+
+  .aside {
+    display: none;
+  }
+}

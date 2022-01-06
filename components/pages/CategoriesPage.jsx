@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Head from "next/head";
+import { useRouter } from "next/router";
 import { Helmet } from "react-helmet";
 import Post from "../post/Post";
 import { gql } from "@apollo/client";
@@ -6,7 +8,7 @@ import client from "../../graphql/config";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-import styles from "./UsefulPage.module.css";
+import styles from "./CategoriesPage.module.css";
 import PostSkeleton from "../postSkeleton/PostSkeleton";
 
 const loadingSkeleton = [];
@@ -16,8 +18,11 @@ for (let index = 0; index < skeletonNumber; index++) {
   loadingSkeleton.push(<PostSkeleton key={index} />);
 }
 export default function UsefulPage() {
+  const router = useRouter();
   const [fetchStatus, setFetchStatus] = useState("initial");
   const [posts, setPosts] = useState([]);
+  const [categoryName, setCategoryName] = useState("");
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -27,7 +32,8 @@ export default function UsefulPage() {
         } = await client.query({
           query: gql`
             query {
-              categories(where: { link: "useful" }) {
+              categories(where: { link: "${router.query.slug}" }) {
+                name
                 posts {
                   id
                   title
@@ -50,6 +56,9 @@ export default function UsefulPage() {
         });
 
         setPosts(categories[0].posts);
+        setCategoryName(categories[0].name);
+
+        console.log(categories[0]);
       } catch (error) {
         console.log(error);
       } finally {
@@ -58,7 +67,7 @@ export default function UsefulPage() {
     };
 
     fetchData();
-  }, []);
+  }, [router.query.slug]);
 
   // scroll to top begin
   useEffect(() => {
@@ -67,8 +76,8 @@ export default function UsefulPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Hữu ích</title>
+      <Head>
+        <title>{categoryName}</title>
         <meta
           name="description"
           content={`Tại đây tôi sẽ cung cấp cho bạn những chia sẻ, kiến thức hữu ích về lập trình`}
@@ -82,10 +91,10 @@ export default function UsefulPage() {
           property="og:description"
           content={`Tại đây tôi sẽ cung cấp cho bạn những chia sẻ, kiến thức hữu ích về lập trình`}
         />
-      </Helmet>
+      </Head>
       <div className={styles.container}>
         <section>
-          {fetchStatus === "finished" && <h2>Useful</h2>}
+          {fetchStatus === "finished" && <h2>{categoryName}</h2>}
 
           {fetchStatus === "finished" && posts.length === 0 && (
             <div className="message">Chưa có bài viết nào</div>

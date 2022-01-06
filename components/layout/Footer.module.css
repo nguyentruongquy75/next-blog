@@ -89,6 +89,9 @@
   height: var(--size);
 
   object-fit: cover;
+
+  background-color: var(--color-white);
+  border-radius: 4px;
 }
 
 .copyright {
@@ -108,5 +111,6 @@
 
   .footer__bottom {
     justify-content: center;
+    gap: 1rem;
   }
 }

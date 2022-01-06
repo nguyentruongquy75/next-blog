@@ -9,8 +9,8 @@ const NavMobile = React.forwardRef(function NavMobile(props, ref) {
     <nav ref={ref} className={styles.nav}>
       <ul onClick={props.onClick}>
         <li>
-          <Link href="/" className={router.asPath === "/" ? styles.active : ""}>
-            <a>
+          <Link href="/">
+            <a className={router.asPath === "/" ? styles.active : ""}>
               <i className="fas fa-home"></i>
               Home
             </a>
@@ -18,11 +18,8 @@ const NavMobile = React.forwardRef(function NavMobile(props, ref) {
         </li>
 
         <li>
-          <Link
-            href="/posts"
-            className={router.asPath === "/posts" ? styles.active : ""}
-          >
-            <a>
+          <Link href="/posts">
+            <a className={router.asPath === "/posts" ? styles.active : ""}>
               <i className="far fa-newspaper"></i>
               Posts
             </a>
@@ -30,11 +27,10 @@ const NavMobile = React.forwardRef(function NavMobile(props, ref) {
         </li>
 
         <li>
-          <Link
-            href="/useful"
-            className={router.asPath === "/useful" ? styles.active : ""}
-          >
-            <a>
+          <Link href="/posts/useful">
+            <a
+              className={router.asPath === "/posts/useful" ? styles.active : ""}
+            >
               <i className="fas fa-file-alt"></i>
               Useful
             </a>
@@ -42,11 +38,8 @@ const NavMobile = React.forwardRef(function NavMobile(props, ref) {
         </li>
 
         <li>
-          <Link
-            href="/about"
-            className={router.asPath === "/about" ? styles.active : ""}
-          >
-            <a>
+          <Link href="/about">
+            <a className={router.asPath === "/about" ? styles.active : ""}>
               <i className="fas fa-user"></i>
               About
             </a>
