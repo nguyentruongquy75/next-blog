@@ -8,9 +8,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.5.6",
+    "graphql": "^16.2.0",
+    "install": "^0.13.0",
+    "markdown-to-jsx": "^7.1.5",
     "next": "12.0.7",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "next-compose-plugins": "^2.2.1",
+    "next-transpile-modules": "^9.0.0",
+    "npm": "^8.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-facebook": "^8.1.4",
+    "react-helmet": "^6.1.0",
+    "react-loading-skeleton": "^3.0.2",
+    "react-syntax-highlighter": "^15.4.5"
   },
   "devDependencies": {
     "eslint": "8.5.0",

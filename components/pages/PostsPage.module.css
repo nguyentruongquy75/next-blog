@@ -1,0 +1,46 @@
+.container {
+  flex: 1;
+  padding: 1.6rem 4.4rem 7.4rem;
+}
+
+.section__expand {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-blue);
+
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.section__expand i {
+  transition: 0.3s linear;
+}
+
+.section__expand:hover {
+  font-weight: 600;
+}
+
+.section__expand:hover i {
+  transform: translateX(4px);
+}
+
+.section__list {
+  margin-top: 2.4rem;
+}
+
+.section + .section {
+  margin-top: 3.6rem;
+}
+
+@media (max-width: 1023px) {
+  .container {
+    padding: 1.6rem 0 7.4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .section__list {
+    margin-top: 0.6rem;
+  }
+}

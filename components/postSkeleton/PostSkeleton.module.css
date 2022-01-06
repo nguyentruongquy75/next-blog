@@ -1,0 +1,36 @@
+.loading div {
+  background-color: var(--color-background-sub);
+}
+
+.loading div:nth-child(1) {
+  position: relative;
+  width: 100%;
+  padding-top: 52%;
+
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+
+.loading div:nth-child(2),
+.loading div:nth-child(3) {
+  margin-top: 1rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.loading div:nth-child(2) {
+  width: 80%;
+}
+
+.loading div:nth-child(3) {
+  width: 60%;
+}
+
+.loading__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}

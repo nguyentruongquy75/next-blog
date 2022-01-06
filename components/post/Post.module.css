@@ -1,0 +1,32 @@
+.post {
+  background-color: var(--color-background-sub);
+}
+
+.post__image {
+  width: 100%;
+  padding-top: 54%;
+  border-radius: 1.6rem;
+}
+
+.post__info {
+}
+
+.post__name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.8;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+  overflow: hidden;
+
+  margin: 1rem 0;
+  color: var(--color-text);
+}
+
+.post__time {
+  font-size: 1.5rem;
+  color: var(--color-text-sub);
+}

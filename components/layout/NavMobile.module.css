@@ -1,0 +1,48 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  background-color: var(--color-white);
+  width: 80%;
+
+  padding: 4rem 0 0 1.6rem;
+  animation: fadeIn 0.3s ease;
+
+  transition: all 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.nav a {
+  display: block;
+  padding: 1.6rem 0 1.6rem 1.6rem;
+  color: #292929;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.nav i {
+  color: #757575;
+  margin-right: 1.6rem;
+  min-width: 2rem;
+}
+
+.nav a:hover {
+  background-color: #f0f0f0;
+}
+
+.nav a.active {
+  background-color: #f0f0f0;
+}

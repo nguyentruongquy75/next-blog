@@ -1,0 +1,26 @@
+.container {
+  padding: 1.6rem 4.4rem;
+  flex: 1;
+
+  color: var(--color-text);
+}
+
+.post__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.2rem;
+
+  margin-top: 2.4rem;
+}
+
+@media (max-width: 767px) {
+  .post__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .post__list {
+    grid-template-columns: 1fr;
+  }
+}

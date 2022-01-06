@@ -1,0 +1,16 @@
+.container {
+  padding: 1.6rem 0;
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  gap: 2.4rem;
+}
+
+.content {
+  grid-column: 2/3;
+}
+
+.aside {
+  grid-column: 3/4;
+}

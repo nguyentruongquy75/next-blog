@@ -1,0 +1,20 @@
+.container {
+  display: inline-block;
+}
+
+.button {
+  cursor: pointer;
+  --size: 4rem;
+  width: var(--size);
+  height: var(--size);
+}
+
+.button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.button:hover {
+  opacity: 1;
+}
