@@ -12,7 +12,6 @@
 
 .article {
   grid-column: 2/3;
-  word-wrap: break-word;
 }
 
 .article .thumbnail {
