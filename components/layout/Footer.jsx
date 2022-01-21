@@ -41,7 +41,6 @@ export default function Footer() {
 
         setCategories(data.categories);
         setAbout(data.abouts[0]);
-        console.log(data);
       } catch (error) {
         console.log(error);
       } finally {

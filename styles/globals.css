@@ -46,6 +46,7 @@ html {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
 
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -192,4 +193,8 @@ ul {
 
 .content h2 strong {
   font-size: inherit;
+}
+
+.content h2 + h3 {
+  margin-top: 1.8rem;
 }
