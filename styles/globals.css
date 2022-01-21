@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: creamy;
-  src: url(../assets/font/script.otf);
+  src: url(../public/fonts/script.otf);
 }
 
 :root {
